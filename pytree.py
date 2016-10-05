@@ -20,7 +20,7 @@ def recurse(path , lvl , spacing):
 
     if os.path.isdir(filePath):
 
-      if j < (len(items)-1):
+      if j < (len(items) - 1):
         print spacing,"├──",
       else :
         print spacing, "└──",
@@ -28,10 +28,10 @@ def recurse(path , lvl , spacing):
 
          #recursive add | and space space
          #if last file, only send a space space
-        if j == len(items)-1:
-          recurse(filePath , lvl+1 , spacing+"    ")
+        if j == len(items) - 1:
+          recurse(filePath , lvl + 1 , spacing+"    ")
         else:
-          recurse(filePath , lvl+1, spacing+" │  ")
+          recurse(filePath , lvl + 1 , spacing+" │  ")
       # if j<len(items)-1:
       # 	recurse(filePath,lvl+1,space+" │  ")
       # else:
@@ -42,7 +42,7 @@ def recurse(path , lvl , spacing):
 
          elif os.path.isfile(filePath):
 
-           if j < (len(items)-1):
+           if j < (len(items) - 1):
              print spacing,"├──",
            else :
              print spacing,"└──",
