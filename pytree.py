@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def recurse(path, lvl, spacing):
 
     items = os.listdir(path)
@@ -25,16 +24,11 @@ def recurse(path, lvl, spacing):
                 print spacing + "└──",
                 print items[j]
 
-            
             if j == len(items) - 1:
                 recurse(filePath, lvl + 1, spacing + "    ")
             else:
                 recurse(filePath, lvl + 1, spacing + " │  ")
             
-
-
-
-
         elif os.path.isfile(filePath):
 
             if j < (len(items) - 1):
@@ -46,8 +40,6 @@ def recurse(path, lvl, spacing):
                 print spacing + "└──",
 
                 print items[j]
-
-
 
 def call(path):
 
