@@ -4,7 +4,7 @@ import os
 import sys
 
 
-def recurse(path , lvl , spacing):
+def recurse(path ,lvl ,spacing):
 
     items = os.listdir(path)
 
@@ -29,9 +29,9 @@ def recurse(path , lvl , spacing):
          #recursive add | and space space
          #if last file, only send a space space
           if j == len(items) - 1:
-            recurse(filePath , lvl + 1 , spacing+"    ")
+            recurse(filePath ,lvl + 1 ,spacing+"    ")
           else:
-            recurse(filePath , lvl + 1 , spacing+" │  ")
+            recurse(filePath ,lvl + 1 , pacing+" │  ")
           # if j<len(items)-1:
           # 	recurse(filePath,lvl+1,space+" │  ")
           # else:
