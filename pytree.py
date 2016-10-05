@@ -26,16 +26,12 @@ def recurse(path, lvl, spacing):
                 print spacing, "└──",
                 print items[j]
 
-            #recursive add | and space space
-            #if last file, only send a space space
+            #
             if j == len(items) - 1:
                 recurse(filePath, lvl + 1, spacing + "    ")
             else:
                 recurse(filePath, lvl + 1, spacing + " │  ")
-            # if j<len(items)-1:
-            # 	recurse(filePath,lvl+1,space+" │  ")
-            # else:
-            # 	recurse(filePath,lvl+1,space+"    ")
+            
 
 
 
@@ -43,9 +39,13 @@ def recurse(path, lvl, spacing):
         elif os.path.isfile(filePath):
 
             if j < (len(items) - 1):
+
                 print spacing, "├──",
+
             else:
+
                 print spacing, "└──",
+                
                 print items[j]
 
 
@@ -53,7 +53,7 @@ def recurse(path, lvl, spacing):
 def call(path):
 
     items = os.listdir(path)
-    #print items
+    
     recurse(path, 0, "")
 
 
