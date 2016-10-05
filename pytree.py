@@ -20,9 +20,9 @@ def recurse(path, lvl, spacing):
         if os.path.isdir(filePath):
 
             if j < (len(items) - 1):
-                print spacing,"├──",
+                print spacing + "├──",
             else:
-                print spacing, "└──",
+                print spacing + "└──",
                 print items[j]
 
             
@@ -39,11 +39,11 @@ def recurse(path, lvl, spacing):
 
             if j < (len(items) - 1):
 
-                print spacing, "├──",
+                print spacing + "├──",
 
             else:
 
-                print spacing, "└──",
+                print spacing + "└──",
 
                 print items[j]
 
