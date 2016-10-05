@@ -3,8 +3,8 @@
 import os
 import sys
 
-def recurse(path, lvl, spacing):
 
+def recurse(path, lvl, spacing):
     items = os.listdir(path)
 
     for item in items[:]:
@@ -41,8 +41,8 @@ def recurse(path, lvl, spacing):
 
                 print items[j]
 
-def call(path):
 
+def call(path):
     items = os.listdir(path)
     
     recurse(path, 0, "")
