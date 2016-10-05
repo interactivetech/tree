@@ -12,21 +12,20 @@ def recurse(path, lvl, spacing):
         if item[0] == '.':
             items.remove(item)
 
-#print "LVL",lvl
 
-    items=sorted(items)
+    items = sorted(items)
     for j in range(len(items)):
-        filePath = os.path.join(path,items[j])
+        filePath = os.path.join(path, items[j])
 
         if os.path.isdir(filePath):
 
             if j < (len(items) - 1):
                 print spacing,"├──",
-            else :
+            else:
                 print spacing, "└──",
                 print items[j]
 
-            #
+            
             if j == len(items) - 1:
                 recurse(filePath, lvl + 1, spacing + "    ")
             else:
@@ -45,7 +44,7 @@ def recurse(path, lvl, spacing):
             else:
 
                 print spacing, "└──",
-                
+
                 print items[j]
 
 
