@@ -45,6 +45,9 @@ def recurse(path, lvl, spacing):
                 print spacing, "├──",
             else:
                 print spacing, "└──",
+
+                # test
+
             print items[j]
 
 
