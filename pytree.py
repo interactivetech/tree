@@ -51,6 +51,7 @@ def call(path):
 
     items = os.listdir(path)
     # print items
+
     recurse(path, 0, "")
 
 
