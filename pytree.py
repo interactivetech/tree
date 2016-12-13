@@ -62,5 +62,5 @@ def call(path):
 
     recurse(path, 0, "")
 
-
-call(sys.argv[1])
+if (len(sys.argv) > 1):
+    call(sys.argv[1])
