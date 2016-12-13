@@ -23,9 +23,13 @@ def recurse(path, lvl, spacing):
         if os.path.isdir(filePath):
 
             if j < (len(items) - 1):
+
                 print spacing, "├──",
+
             else:
+
                 print spacing, "└──",
+
             print items[j]
 
             # recursive add | and space space
